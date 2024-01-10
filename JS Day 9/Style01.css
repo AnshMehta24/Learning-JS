@@ -1,0 +1,36 @@
+body{
+    margin:0;
+}
+
+.color{
+    margin: 100px auto 100px;
+    text-align: center;
+    width: 90%;
+}
+
+span{
+    display: block;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+#grey{
+    background: grey;
+}
+
+#white{
+    background: white;
+}
+
+#blue{
+    background: blue;
+}
+
+#green{
+    background: green;
+}
