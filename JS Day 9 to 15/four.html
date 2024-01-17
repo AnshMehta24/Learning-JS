@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Part 4</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langname){
+        const li = document.createElement('li')
+        li.innerHTML = `${langname}`
+        document.querySelector('.language').appendChild(li)
+    }
+
+    // addLanguage("HTML")
+    // addLanguage("typescript")
+
+    //Optimize Approach
+    function addLang (langname){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langname))
+        document.querySelector('.language').appendChild(li)
+    }
+
+    addLang("Rust")
+
+    // Edit 
+    const secondLang = document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML = "python"
+    const newLI =document.createElement('li')
+    newLI.textContent ="python"
+    secondLang.replaceWith(newLI)
+
+    // remove 
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+</html>
