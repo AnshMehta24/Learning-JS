@@ -1,0 +1,96 @@
+body{   
+    height: 97.5vh;
+    background-image:linear-gradient(135deg,lightblue,lightgreen);
+}
+
+.box {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    height: 59vh;
+    bottom: 45px;
+}
+
+.heading{
+    font-size: 70px;
+}
+.bmi{
+    position:  relative;
+    top: 20px;
+    margin: 20px;
+    font-size: 70px;
+}
+
+.form{
+    position: relative;
+    font-size: 35px;
+    }
+
+#gender {
+    margin-left: 65px;
+    position: relative;
+    width: 102px;
+    height: 32px;
+    font-weight: 500;
+    font-size: 22px;
+}
+.age {
+    margin-left: 105px;
+    position: relative;
+    width: 161px;
+    height: 32px;
+    font-weight: 500;
+    font-size: 22px;
+}
+.height {
+    margin-left: 68px;
+    position: relative;
+    width: 175px;
+    height: 32px;
+    font-weight: 500;
+    font-size: 22px;
+}
+.weight {
+    margin-left: 63px;
+    position: relative;
+    width: 180px;
+    height: 32px;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.btn{
+    width: 162px;
+    margin-left: 178px;
+    position: relative;
+    height: 39px;
+    font-size: 29px;
+    font-weight: 600;
+}
+
+span{
+    text-align: center;
+}
+
+.result{
+    text-align: center;
+}
+
+#weight-guide {
+    position: relative;
+    left:3vw;
+    bottom: 250px;
+    font-size: 28px;
+    width: 25vw;
+}
+
+.img {
+    position: relative;
+    bottom: 675px;
+    width: 25vw;
+    left: 39vw;
+}
+
+img{
+    height: 600px;
+}
