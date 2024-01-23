@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request</title>
+</head>
+
+<body style="object-fit: cover;">
+    <!-- XMLHttpRequest.readyState property -->
+    <!-- 5 states -->
+    <!-- 0	UNSENT	            Client has been created. open() not called yet.
+    1	OPENED	            open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	            Downloading; responseText holds partial data.
+    4	DONE	            The operation is complete. -->
+</body>
+
+<script>
+
+    let button = document.createElement('button')
+    button.classList.add('button')
+    document.body.appendChild(button)
+    button.innerHTML = 'Check Data'
+    button.style.display = 'none'
+
+    let avatar_img;
+    let follow;
+    const requestUrl = 'https://api.github.com/users/AnshMehta24'
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', requestUrl)
+
+    xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+            const data = JSON.parse(this.responseText)
+            console.log(typeof data);
+            // console.log(data);
+            console.log(data.followers);
+            console.log(data.avatar_url);
+            button.style.display = 'block'
+             follow = data.followers
+             avatar_img = data.avatar_url
+        }
+        button.addEventListener('click', () => {
+            followerClass.innerHTML = '<h4>Total Follower is : </h4>' + follow;
+            cardImgClass.style.width = "30vw";
+            cardImgClass.style.height = "25vw";
+            cardImgClass.style.border = "5px solid red";
+            cardImgClass.style.background = "url(" + `${avatar_img}` + ")"
+            cardImgClass.style.objectFit = "cover";
+})
+    }
+
+
+
+    let card_main = document.createElement('div')
+    card_main.classList.add('card')
+    document.body.appendChild(card_main)
+
+    let card_img = document.createElement('div')
+    card_img.classList.add('card_img')
+    card_main.appendChild(card_img)
+
+    let followerCount = document.createElement('div')
+    followerCount.classList.add('followers')
+    card_main.appendChild(followerCount)
+
+    const followerClass = document.querySelector('.followers')
+    const cardImgClass = document.querySelector('.card_img')
+
+
+
+
+
+    xhr.send()
+</script>
+
+</html>
