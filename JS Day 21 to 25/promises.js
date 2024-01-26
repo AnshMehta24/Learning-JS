@@ -1,3 +1,11 @@
+//Promise Object
+// The Promise Object represents the eventual completion (or failiure) of an asynchronous operation & its resulting value
+
+// three states 
+// 1) pending
+// 2) fulfilled 
+// 3) rejected
+
 const promiseOne = new Promise(function(resolve, reject){
     //Do an async task
     // DB calls, cryptography, network
